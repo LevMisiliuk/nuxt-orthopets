@@ -20,7 +20,7 @@
           />
         </div>
       </div>
-      <button type="button" class="orthopets-card-mobile__button">Докладніше</button>
+      <button type="button" class="orthopets-card-mobile__button">{{ $t('card.button') }}</button>
     </div>
   </div>
 </template>
@@ -77,7 +77,6 @@ export default {
     width: 100%;
     background: #fbfbfb;
     padding: 12px;
-    margin: 20px;
     transition: all 0.2s ease;
     cursor: pointer;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;

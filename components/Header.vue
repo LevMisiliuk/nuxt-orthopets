@@ -4,13 +4,18 @@
       <img class="header__logo" src="../assets/images/logo-orthopets.png" alt="Orthopets" />
     </NuxtLink>
     <div class="header__right">
+      <LanguageSelect />
       <h3 class="header__title">
-        Ортопедичне-нейрохірургічне ветеринарне співтовариство України
-        "Ortopets"
+        {{ $t('header') }}
       </h3>
     </div>
   </header>
 </template>
+
+<script>
+export default {
+}
+</script>
 
 <style lang="scss" scoped>
 .header {
@@ -41,13 +46,13 @@
   }
 
   &__right {
-    font-size: 16px;
-    line-height: 22px;
-
-    text-align: right;
-
     color: #df3a06;
+    display: flex;
+    font-size: 16px;
+    gap: 10px;
+    line-height: 22px;
     padding: 20px 24px;
+    text-align: right;
   }
 
   &__burger {

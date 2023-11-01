@@ -8,6 +8,7 @@
       :experience="currentDoc.experience"
       :operations="currentDoc.operations"
     />
+    <Footer />
   </MqResponsive>
   <MqResponsive :target="['lg', 'xl', 'xxl']">
     <Header />
@@ -19,12 +20,14 @@
       :experience="currentDoc.experience"
       :operations="currentDoc.operations"
     />
+    <Footer />
   </MqResponsive>
 </template>
 
 <script>
-import { markerOptions } from '~~/assets/geo-info/geo-info'
+import { arrayOptionsUA, arrayOptionsEN } from '~~/assets/doctors-info/oprtopets-list'
 import { MqResponsive } from "vue3-mq"
+import { useI18n } from 'vue-i18n';
 
 export default {
   components: {
@@ -33,9 +36,14 @@ export default {
   setup () {
     const router = useRouter()
     const currentDoc = ref(null)
+    const { locale } = useI18n();
+
+    const arrayOptions = computed(() => {
+      return locale.value === 'en' ? arrayOptionsEN : arrayOptionsUA
+    });
 
     function filterData () {
-      markerOptions.filter(item => {
+      arrayOptions.value.filter(item => {
         if (item.id === Number(router.currentRoute.value.params.id))  currentDoc.value = item
       })
     }

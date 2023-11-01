@@ -20,7 +20,7 @@
           />
         </div>
       </div>
-      <button type="button" class="orthopets-list__button">Докладніше</button>
+      <button type="button" class="orthopets-list__button">{{ $t('card.button') }}</button>
     </div>
   </div>
 </template>
@@ -78,7 +78,6 @@ export default {
     width: 480px;
     background: #fbfbfb;
     padding: 12px;
-    margin-bottom: 52px;
     transition: all 0.2s ease;
     cursor: pointer;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
@@ -103,6 +102,10 @@ export default {
     background-color: #df3a06;
     border: none;
     color: #fff;
+
+    &:hover {
+      background-color: #f84b16;
+    }
   }
 
   &__doctor-image {

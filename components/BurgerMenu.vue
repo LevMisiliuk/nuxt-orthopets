@@ -25,14 +25,27 @@
       <div class="burger-menu__dropdown-content">
         <div class="burger-menu__dropdown-content-items">
           <NuxtLink class="burger-menu__dropdown-content-item" to="/">
-            Мапа
+            {{ $t('sidebar.map') }}
           </NuxtLink>
           <NuxtLink
             class="burger-menu__dropdown-content-item"
             to="/orthopets-list"
           >
-            Список ортопедів
+            {{ $t('sidebar.list') }}
           </NuxtLink>
+          <NuxtLink
+            class="burger-menu__dropdown-content-item"
+            to="/orthopets-catalog"
+          >
+            {{ $t('sidebar.learning') }}
+          </NuxtLink>
+          <NuxtLink
+            class="burger-menu__dropdown-content-item"
+            to="/download-documents"
+          >
+            {{ $t('sidebar.conferences') }}
+          </NuxtLink>
+          <LanguageSelect />
         </div>
       </div>
     </div>
@@ -83,7 +96,6 @@ export default {
     overflow: hidden;
 
     &-content {
-      height: 30%;
       display: flex;
       flex-direction: column;
       align-items: center;

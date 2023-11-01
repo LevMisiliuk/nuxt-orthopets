@@ -58,6 +58,8 @@ export default {
 
 <style lang="scss" scoped>
 .orthopet-page {
+  height: 80vh;
+  
   &__inner {
     display: flex;
     justify-content: space-between;
@@ -82,9 +84,10 @@ export default {
   }
 
   &__ex-and-spec {
+    color: #df3a06;
     display: flex;
     font-weight: bold;
-    color: #df3a06;
+    justify-content: space-between;
   }
 
   &__info-block-specialization {

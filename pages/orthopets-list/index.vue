@@ -2,11 +2,13 @@
   <MqResponsive :target="['xs', 'sm', 'md']">
     <HeaderMobile />
     <OrthopetsListMobile />
+    <Footer />
   </MqResponsive>
   <MqResponsive :target="['lg', 'xl', 'xxl']">
     <Header />
     <Sidebar />
     <OrthopetsList />
+    <Footer />
   </MqResponsive>
 </template>
 

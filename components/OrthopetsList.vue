@@ -3,7 +3,7 @@
     <div class="orthopets-list wrapper">
       <OrthopetsCard
         class="orthopets-card"
-        v-for="item in markerOptions"
+        v-for="item in arrayOptions"
         :key="item.id"
         :name="item.name"
         :experience="item.experience"
@@ -19,11 +19,17 @@
 </template>
 
 <script>
-import { markerOptions } from '~~/assets/geo-info/geo-info'
+import { arrayOptionsUA, arrayOptionsEN } from '~~/assets/doctors-info/oprtopets-list'
+import { useI18n } from 'vue-i18n';
 
 export default {
   setup() {
     const router = useRouter()
+    const { locale } = useI18n();
+
+    const arrayOptions = computed(() => {
+      return locale.value === 'en' ? arrayOptionsEN : arrayOptionsUA
+    });
 
     function openItem(item) {
       router.push({
@@ -32,7 +38,7 @@ export default {
       })
     }
     return {
-      markerOptions,
+      arrayOptions,
       openItem,
     }
   },
@@ -42,8 +48,8 @@ export default {
 <style lang="scss" scoped>
 .orthopets-list {
   display: flex;
-  justify-content: space-between;
   flex-direction: row;
   flex-wrap: wrap;
+  gap: 40px;
 }
 </style>

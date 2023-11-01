@@ -1,13 +1,17 @@
 <template>
-  <MqResponsive :target="['xs', 'sm', 'md']">
-    <HeaderMobile />
-    <MapMobile />
-  </MqResponsive>
-  <MqResponsive :target="['lg', 'xl', 'xxl']">
-    <Header />
-    <Sidebar />
-    <Map />
-  </MqResponsive>
+  <div>
+    <MqResponsive :target="['xs', 'sm', 'md']">
+      <HeaderMobile />
+      <MapMobile />
+      <Footer />
+    </MqResponsive>
+    <MqResponsive :target="['lg', 'xl', 'xxl']">
+      <Header />
+      <Sidebar />
+      <Map />
+      <Footer />
+    </MqResponsive>
+  </div>
 </template>
 
 <script>

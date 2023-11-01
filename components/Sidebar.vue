@@ -1,20 +1,30 @@
 <template>
-  <div>
-    <aside class="sidebar">
-      <NuxtLink class="sidebar__link" to="/">
-        <div class="sidebar__link-content">
-          <img src="../assets/images/home-icon.svg" alt="Home" />
-          <span>Мапа</span>
-        </div>
-      </NuxtLink>
-      <NuxtLink class="sidebar__link" to="/orthopets-list">
-        <div class="sidebar__link-content">
-          <img src="../assets/images/team-icon.svg" alt="Team" />
-          <span>Список ортопедів</span>
-        </div>
-      </NuxtLink>
-    </aside>
-  </div>
+  <aside class="sidebar">
+    <NuxtLink class="sidebar__link" to="/">
+      <div class="sidebar__link-content">
+        <img src="../assets/images/home-icon.svg" alt="Home" />
+        <span>{{ $t('sidebar.map') }}</span>
+      </div>
+    </NuxtLink>
+    <NuxtLink class="sidebar__link" to="/orthopets-list">
+      <div class="sidebar__link-content">
+        <img src="../assets/images/team-icon.svg" alt="Team" />
+        <span>{{ $t('sidebar.list') }}</span>
+      </div>
+    </NuxtLink>
+    <NuxtLink class="sidebar__link" to="/orthopets-catalog">
+      <div class="sidebar__link-content">
+        <img src="../assets/images/learning.svg" alt="Team" />
+        <span>{{ $t('sidebar.learning') }}</span>
+      </div>
+    </NuxtLink>
+    <NuxtLink class="sidebar__link" to="/ortopets-documents">
+      <div class="sidebar__link-content">
+        <img src="../assets/images/conferences.svg" alt="Team" />
+        <span>{{ $t('sidebar.conferences') }}</span>
+      </div>
+    </NuxtLink>
+  </aside>
 </template>
 
 <script>

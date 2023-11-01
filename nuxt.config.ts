@@ -33,5 +33,16 @@ export default {
     public: {
       map: process.env.MAP_KEY
     }
+  },
+  router: {
+    extendRoutes(routes, resolve) {
+      routes.push(
+        {
+          name: 'lang',
+          path: '/:lang',
+          component: resolve(__dirname, 'pages/index.vue')
+        }
+      );
+    }
   }
 }

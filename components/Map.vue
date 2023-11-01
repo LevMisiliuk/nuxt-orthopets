@@ -1,16 +1,16 @@
 <template>
   <div class="map wrapper">
     <h2 class="header">
-      Карта сертифікованих ортопедів та нейрохірургів України
+      {{ $t('map.header') }}
     </h2>
     <h3 class="map__subtitle">
-      Швидкий та зручний пошук спеціаліста з потрібної місцевості
+      {{ $t('map.subtitle') }}
     </h3>
     <GoogleMap
       :api-key="mapKey"
       :center="center"
       :zoom="6"
-      style="width: 100%; height: 447px"
+      style="width: 100%; height: 475px"
     >
       <Marker v-for="item in markerOptions" :key="item.id" :options="item">
         <InfoWindow class="info-window">
@@ -28,6 +28,12 @@
               <p class="info-window__doctor-data-clinic">
                 {{ item.clinicName }}
               </p>
+              <a
+                :href="item.link"
+                class="info-window__doctor-data-link"
+              >
+                {{ item.link }}
+              </a>
               <p class="info-window__doctor-data-item_orange">
                 {{ item.phoneNumber }}
               </p>
@@ -52,19 +58,24 @@
 </template>
 
 <script>
-import { markerOptions } from '~~/assets/geo-info/geo-info';
+import { markerOptionsUA, markerOptionsEN } from '~~/assets/doctors-info/geo-info';
 import { defineComponent } from 'vue';
 import { GoogleMap, Marker, InfoWindow } from 'vue3-google-map';
+import { useI18n } from 'vue-i18n';
 
 export default defineComponent({
   components: { GoogleMap, Marker, InfoWindow },
   setup() {
+    const { locale } = useI18n();
     const config = useRuntimeConfig()
     const mapKey = ref(config.public.map)
     const center = {
       lat: 48.464718,
       lng: 35.046185
     };
+    const markerOptions = computed(() => {
+      return locale.value === 'en' ? markerOptionsEN : markerOptionsUA
+    });
 
     return {
       center,
@@ -76,6 +87,7 @@ export default defineComponent({
 </script>
 <style lang="scss" scoped>
 .map {
+  height: 80vh;
   display: flex;
   flex-direction: column;
 
@@ -140,6 +152,15 @@ export default defineComponent({
     font-weight: 400;
 
     margin-bottom: 16px;
+  }
+
+  &__doctor-data-link {
+    color: #000;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 16px;
+    margin-bottom: 8px;
+    text-decoration: underline;
   }
 
   &__doctor-data-item {

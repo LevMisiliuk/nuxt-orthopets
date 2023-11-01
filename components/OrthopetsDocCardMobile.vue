@@ -58,6 +58,7 @@ export default {
 
 <style lang="scss" scoped>
 .orthopet-page {
+
   &__inner {
     display: flex;
     flex-direction: column;

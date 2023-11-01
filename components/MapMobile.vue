@@ -1,10 +1,10 @@
 <template>
   <div class="map-mobile wrapper-mobile">
     <h2 class="header-mobile">
-      Карта сертифікованих ортопедів та нейрохірургів України
+      {{ $t('map.header') }}
     </h2>
     <h3 class="map-mobile__subtitle">
-      Швидкий та зручний пошук спеціаліста з потрібної місцевості
+      {{ $t('map.subtitle') }}
     </h3>
     <GoogleMap
       api-key="AIzaSyA-172s8-cEZIqJ44qxzfkFRe4aYcf2jbE"
@@ -45,9 +45,10 @@
 </template>
 
 <script>
-import { markerOptions } from '~~/assets/geo-info/geo-info'
+import { markerOptionsUA, markerOptionsEN } from '~~/assets/doctors-info/geo-info';
 import { defineComponent } from 'vue'
 import { GoogleMap, Marker, InfoWindow } from 'vue3-google-map'
+import { useI18n } from 'vue-i18n'
 
 export default defineComponent({
   components: { GoogleMap, Marker, InfoWindow },
@@ -56,6 +57,11 @@ export default defineComponent({
       lat: 48.464718,
       lng: 35.046185,
     }
+    
+    const { locale } = useI18n();
+    const markerOptions = computed(() => {
+      return locale.value === 'en' ? markerOptionsEN : markerOptionsUA
+    });
 
     return {
       center,
@@ -66,6 +72,7 @@ export default defineComponent({
 </script>
 <style lang="scss" scoped>
 .map-mobile {
+  height: 80vh;
   display: flex;
   flex-direction: column;
 
