@@ -62,14 +62,14 @@ export default {
     flex-direction: row;
   }
   &__item {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
     background: #fbfbfb;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+    cursor: pointer;
+    display: grid;
+    gap: 5px;
+    grid-template-columns: 200px 1fr;
     padding: 12px;
     transition: all 0.2s ease;
-    cursor: pointer;
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
 
     &:hover {
       transform: translateY(-3px);
@@ -92,10 +92,10 @@ export default {
   }
 
   &__doctor-image {
-    width: 230px;
     margin-right: 8px;
-
+    max-height: 250px;
     object-fit: cover;
+    width: 200px;
   }
 
   &__doctor-name {

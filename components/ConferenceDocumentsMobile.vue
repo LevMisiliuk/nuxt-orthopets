@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="conference-documents wrapper">
+    <div class="conference-documents wrapper-mobile">
         <a
             :href="docPath"
             :download="docName"

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="orthopets-list-mobile wrapper-mobile">
+    <div class="orthopets-learning-list-mobile wrapper-mobile">
       <OrthopetsLearningCardMobile
         class="orthopets-card"
         v-for="item in arrayOptions"
@@ -40,11 +40,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.orthopets-list-mobile {
-  align-items: center;
+.orthopets-learning-list-mobile {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  width: 100%;
 }
 </style>

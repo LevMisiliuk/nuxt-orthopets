@@ -25,7 +25,7 @@ export default {
   flex-direction: column;
   padding: 20px;
   position: relative;
-  width: 100%;
+  max-width: 100%;
 
   &__phone {
     font-size: 20px;

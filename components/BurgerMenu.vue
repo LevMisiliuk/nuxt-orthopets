@@ -41,7 +41,7 @@
           </NuxtLink>
           <NuxtLink
             class="burger-menu__dropdown-content-item"
-            to="/download-documents"
+            to="/ortopets-documents"
           >
             {{ $t('sidebar.conferences') }}
           </NuxtLink>

@@ -1,23 +1,23 @@
 <template>
   <div>
-    <div class="orthopet-page wrapper-mobile">
-      <div class="orthopet-page__inner">
-        <div class="orthopet-page__image-block">
-          <img class="orthopet-page__image" :src="image" alt="" />
+    <div class="orthopet-page-mobile wrapper-mobile">
+      <div class="orthopet-page-mobile__inner">
+        <div class="orthopet-page-mobile__image-block">
+          <img class="orthopet-page-mobile__image" :src="image" alt="" />
         </div>
-        <div class="orthopet-page__info-block">
-          <div class="orthopet-page__info-block-name header-mobile">
+        <div class="orthopet-page-mobile__info-block">
+          <div class="orthopet-page-mobile__info-block-name header-mobile">
             {{ name }}
           </div>
-          <div class="orthopet-page__ex-and-spec">
-            <div class="orthopet-page__info-block-specialization">
+          <div class="orthopet-page-mobile__ex-and-spec">
+            <div class="orthopet-page-mobile__info-block-specialization">
               {{ specialization }}
             </div>
-            <div class="orthopet-page__info-block-experience">
+            <div class="orthopet-page-mobile__info-block-experience">
               {{ experience }}
             </div>
           </div>
-          <div class="orthopet-page__info-block-extra-info">
+          <div class="orthopet-page-mobile__info-block-extra-info">
             {{ operations }}
           </div>
         </div>
@@ -57,7 +57,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.orthopet-page {
+.orthopet-page-mobile {
 
   &__inner {
     display: flex;

@@ -47,10 +47,8 @@ export default {
 
 <style lang="scss" scoped>
 .orthopets-list-mobile {
-  align-items: center;
   display: flex;
   flex-direction: column;
   gap: 20px;
-  width: 100%;
 }
 </style>

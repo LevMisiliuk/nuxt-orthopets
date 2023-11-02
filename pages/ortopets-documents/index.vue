@@ -1,7 +1,7 @@
 <template>
     <MqResponsive :target="['xs', 'sm', 'md']">
         <HeaderMobile />
-        <ConferenceDocuments />
+        <ConferenceDocumentsMobile />
         <Footer />
     </MqResponsive>
     <MqResponsive :target="['lg', 'xl', 'xxl']">
