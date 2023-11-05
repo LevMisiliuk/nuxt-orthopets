@@ -46,7 +46,13 @@ export default {
         if (item.id === Number(router.currentRoute.value.params.id))  currentDoc.value = item
       })
     }
-    filterData()
+
+    filterData();
+
+    watch(locale, () => {
+      filterData();
+    });
+    
     return {
       currentDoc
     }
