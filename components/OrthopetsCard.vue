@@ -3,7 +3,7 @@
     <img class="orthopets-list__doctor-image" :src="image" alt="Doctor" />
     <div class="orthopets-list__doctor-data">
       <div class="orthopets-list__doctor-data-inner">
-        <p class="orthopets-list__doctor-data-item">{{ name }}</p>
+        <p class="orthopets-list__doctor-data-item_orange">{{ name }}</p>
         <p class="orthopets-list__doctor-data-item">{{ experience }}</p>
         <p class="orthopets-list__doctor-data-item">{{ clinicName }}</p>
         <p class="orthopets-list__doctor-data-item_orange">{{ phoneNumber }}</p>

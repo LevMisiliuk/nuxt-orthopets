@@ -3,7 +3,7 @@
     <img class="orthopets-card-mobile__doctor-image" :src="image" alt="Doctor" />
     <div class="orthopets-card-mobile__doctor-data">
       <div class="orthopets-card-mobile__doctor-data-inner">
-        <p class="orthopets-card-mobile__doctor-data-item">{{ name }}</p>
+        <p class="orthopets-card-mobile__doctor-data-item_orange">{{ name }}</p>
         <p class="orthopets-card-mobile__doctor-data-item">{{ experience }}</p>
         <p class="orthopets-card-mobile__doctor-data-item">{{ clinicName }}</p>
         <p class="orthopets-card-mobile__doctor-data-item_orange">{{ phoneNumber }}</p>
