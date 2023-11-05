@@ -26,6 +26,7 @@ export default {
   padding: 20px;
   position: relative;
   max-width: 100%;
+  margin-top: 100px;
 
   &__phone {
     font-size: 20px;

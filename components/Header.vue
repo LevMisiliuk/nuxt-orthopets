@@ -4,10 +4,10 @@
       <img class="header__logo" src="../assets/images/logo-orthopets.png" alt="Orthopets" />
     </NuxtLink>
     <div class="header__right">
-      <LanguageSelect />
       <h3 class="header__title">
         {{ $t('header') }}
       </h3>
+      <LanguageSelect />
     </div>
   </header>
 </template>
