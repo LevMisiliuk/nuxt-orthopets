@@ -1,13 +1,13 @@
 <template>
   <footer class="footer">
     <div class="footer__phone">
-      +38 (097) 555-74-39
+      +38 (050) 960-37-67
     </div>
     <div class="footer__mail">
       <img src="../assets/images/logo-orthopets-white.svg" alt="Orthopets" />
     </div>
     <div class="footer__developed">
-      Developed by Ekaterina Domochka
+      Developed by Kateryna Domochka
     </div>
   </footer>
 </template>

@@ -118,7 +118,7 @@ export const arrayOptionsUA = [
     experience: '',
     clinicName:
       'Vet.dp.ua',
-    phoneNumber: '+38 (097) 555-74-39',
+    phoneNumber: '+380 (67) 650 35 49',
     instagram: 'https://instagram.com',
     viber: 'https://viber.com',
     facebook: 'https://facebook.com',
@@ -306,7 +306,7 @@ export const arrayOptionsEN = [
     experience: '',
     clinicName:
       'Vet.dp.ua',
-    phoneNumber: '+38 (097) 555-74-39',
+    phoneNumber: '+380 (67) 650 35 49',
     instagram: 'https://instagram.com',
     viber: 'https://viber.com',
     facebook: 'https://facebook.com',
