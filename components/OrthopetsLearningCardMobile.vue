@@ -4,7 +4,7 @@
     <div class="orthopets-learning-card-mobile__doctor-data">
       <div class="orthopets-learning-card-mobile__doctor-data-inner">
         <p class="orthopets-learning-card-mobile__doctor-name">{{ name }}</p>
-        <p class="orthopets-learning-card-mobile__doctor-data-item">{{ description }}</p>
+        <p class="orthopets-learning-card-mobile__doctor-data-item">{{ transformDesc }}</p>
       </div>
       <button type="button" class="orthopets-learning-card-mobile__button">{{ $t('card.button') }}</button>
     </div>
@@ -48,8 +48,16 @@ export default {
       default: null
     }
   },
-  setup() {
-    return {}
+  setup(props) {
+    const transformDesc = ref(props.description);
+
+    if (transformDesc.value.length > 80) {
+      transformDesc.value = transformDesc.value.slice(0, 80) + "...";
+    }
+
+    return {
+      transformDesc,
+    }
   },
 }
 </script>
@@ -107,10 +115,13 @@ export default {
   }
 
   &__doctor-data-item {
-    font-size: 16px;
-    margin-bottom: 8px;
     color: #000;
+    font-size: 16px;
     font-weight: 400;
+    height: 105px;
+    margin-bottom: 8px;
+    overflow: hidden;
+    text-overflow: ellipsis;
     white-space: pre-wrap;
 
     &_orange {

@@ -4,7 +4,7 @@
     <div class="orthopets-learning-list__doctor-data">
       <div class="orthopets-learning-list__doctor-data-inner">
         <p class="orthopets-learning-list__doctor-name">{{ name }}</p>
-        <p class="orthopets-learning-list__doctor-data-item">{{ description }}</p>
+        <p class="orthopets-learning-list__doctor-data-item">{{ transformDesc }}</p>
       </div>
       <button type="button" class="orthopets-learning-list__button">{{ $t('card.button') }}</button>
     </div>
@@ -48,8 +48,16 @@ export default {
       default: null
     }
   },
-  setup() {
-    return {}
+  setup(props) {
+    const transformDesc = ref(props.description);
+
+    if (transformDesc.value.length > 120) {
+      transformDesc.value = transformDesc.value.slice(0, 120) + "...";
+    }
+
+    return {
+      transformDesc,
+    }
   },
 }
 </script>

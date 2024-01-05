@@ -1,20 +1,32 @@
 <template>
   <div>
     <div class="conference-documents wrapper">
-        <a
-            :href="docPath"
-            :download="docName"
-            class="conference-documents__link"
-        >
-            <img
-                src="../assets/images/pdf-icon.svg"
-                alt="pdf"
-                class="conference-documents__img"
-            />
-            <p class="conference-documents__text">
-                {{ $t('conference') }}
-            </p>
-        </a>
+        <div class="conference-documents__wrapper">
+            <h3>Conference</h3>
+            <a
+                :href="docPath"
+                :download="docName"
+                class="conference-documents__link"
+            >
+                <img
+                    src="../assets/images/pdf-icon.svg"
+                    alt="pdf"
+                    class="conference-documents__img"
+                />
+                <p class="conference-documents__text">
+                    {{ $t('conference') }}
+                </p>
+            </a>
+            <iframe
+                width="80%"
+                height="550"
+                src="https://www.youtube.com/embed/NjnPTEySV6g?si=ZFNHV1iI1NLChCd3"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+        </div>
     </div>
   </div>
 </template>
@@ -45,6 +57,12 @@ export default {
 <style lang="scss" scoped>
 .conference-documents {
     height: 80vh;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
 
     &__link {
         align-items: center;
