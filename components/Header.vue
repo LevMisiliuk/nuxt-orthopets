@@ -1,7 +1,7 @@
 <template>
   <header class="header">
     <NuxtLink to="/" class="header__left">
-      <img class="header__logo" src="../assets/images/logo-orthopets.png" alt="Orthopets" />
+      <img class="header__logo" src="../assets/images/logo-orthopets.svg" alt="Orthopets" />
     </NuxtLink>
     <div class="header__right">
       <h3 class="header__title">

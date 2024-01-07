@@ -3,7 +3,7 @@
     <nav>
       <div class="burger-menu__wrap">
         <NuxtLink to="/">
-          <img src="../assets/images/logo-orthopets.png" alt="Orthopets" />
+          <img src="../assets/images/logo-orthopets.svg" alt="Orthopets" />
         </NuxtLink>
         <button
           @click="toggleMenu"
