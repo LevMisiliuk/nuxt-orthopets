@@ -48,6 +48,7 @@ export default {
   &__right {
     color: #df3a06;
     display: flex;
+    align-items: center;
     font-size: 16px;
     gap: 10px;
     line-height: 22px;

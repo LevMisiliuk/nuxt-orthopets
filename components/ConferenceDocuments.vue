@@ -17,6 +17,8 @@
                     {{ $t('conference') }}
                 </p>
             </a>
+            <iframe width="80%"
+                height="550" src="https://www.youtube.com/embed/4f9U33ONBN4?si=b2ca0vY9EkUIA6zT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             <iframe
                 width="80%"
                 height="550"
@@ -56,7 +58,7 @@ export default {
 
 <style lang="scss" scoped>
 .conference-documents {
-    height: 80vh;
+    height: 100%;
 
     &__wrapper {
         display: flex;

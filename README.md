@@ -30,7 +30,7 @@ npm run dev
 Build the application for production:
 
 ```bash
-npm run build
+yarn generate ---------- FOR DEPLOYMENT STATIC SITE
 ```
 
 Locally preview production build:
