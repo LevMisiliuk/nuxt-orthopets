@@ -8,7 +8,7 @@ export default {
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         { name: 'description', content: 'Ортопедичне-нейрохірургічне ветеринарне співтовариство України "Ortopets". Сайт з посиланнями та інформацією про сертифікованих ветерінарних ортопедів України' },
         { name: 'keywords', content: 'Ортопеди України Сертифіковані ветеринарні ортопеди Карта сертифікованих ортопедів' },
-        { property: 'og:image', content: './assets/images/logo-orthopets.svg' } // Замените URL_изображения на ссылку на ваше изображение
+        { property: 'og:image', content: 'https://orthopets.online/static-images/logo-orthopets.svg' }
       ],
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
