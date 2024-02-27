@@ -157,7 +157,7 @@ export const markerOptionsUA = [
     instagram: 'https://instagram.com',
     viber: 'https://viber.com',
     facebook: 'https://facebook.com',
-    position: { lat: 50.37736780401218, lng: 30.53805690447126 },
+    position: { lat: 50.398331, lng: 30.463539 },
     specialization: 'Неврологія, травматологія',
     link: 'https://rudiy-kit.com/',
     operations:
